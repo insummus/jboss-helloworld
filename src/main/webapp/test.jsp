@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-	<TITLE>mySQL Test JSP page</TITLE>
+	<TITLE>MySQL Test JSP page</TITLE>
 	<%@ page import="java.util.*" %>
 	<%@ page import="java.io.*" %>
 	<%@ page import="java.sql.*" %>
@@ -9,7 +9,7 @@
 </HEAD>
 <BODY>
 
-<H1>mySQL JSP Test page</H1>
+<H1>MySQL JSP Test page</H1>
 <img src="images/jbosscorp_logo.png">
 
 <H2>Pet Table Data</H2>

@@ -29,7 +29,7 @@ ResultSet rs;
 
 try {
 	ctx = new InitialContext();
-	ds = (DataSource) ctx.lookup("java:/jboss/datasources/mydb");
+	ds = (DataSource) ctx.lookup("java:comp/env/jdbc/mydb");
 	conn = ds.getConnection();
 	stmt = conn.createStatement();
 	rs = stmt.executeQuery("select * from pet");

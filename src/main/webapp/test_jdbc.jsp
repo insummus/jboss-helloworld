@@ -21,9 +21,9 @@
 	<TH align=left>sex</TH>
 </TR>
 <%
-Connection conn;
-Statement stmt;
-ResultSet rs;
+Connection conn = null;
+Statement stmt = null;
+ResultSet rs = null;
 
 try {
 	String driver = "com.mysql.jdbc.Driver";

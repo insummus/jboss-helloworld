@@ -58,10 +58,6 @@ try {
 %>
 	<%= sqle.getMessage() %>
 <%
-} catch (NamingException ne) {
-%>
-	<%= ne.getMessage() %>
-<%
 }
 %>
 

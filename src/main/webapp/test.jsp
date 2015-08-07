@@ -23,9 +23,9 @@
 <%
 InitialContext ctx;
 DataSource ds;
-Connection conn;
-Statement stmt;
-ResultSet rs;
+Connection conn = null;
+Statement stmt = null;
+ResultSet rs = null;
 
 try {
 	ctx = new InitialContext();
@@ -56,7 +56,24 @@ try {
 %>
 	<%= ne.getMessage() %>
 <%
+} finally {
+        try {
+                if (rs != null) {
+                        rs.close();
+                }
+                if (stmt != null) {
+                        stmt.close();
+                }
+                if (conn != null) {
+                        conn.close();
+                }
+        } catch (Exception e) {
+%>
+                <%= e.getMessage() %>
+<%
+        }
 }
+
 %>
 
 </TABLE>

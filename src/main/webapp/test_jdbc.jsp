@@ -58,6 +58,22 @@ try {
 %>
 	<%= sqle.getMessage() %>
 <%
+} finally {
+	try {
+		if (rs != null) {
+			rs.close();
+		}
+		if (stmt != null) {
+			stmt.close();
+		}
+		if (conn != null) {
+			conn.close();
+		}
+	} catch (Exception e) {
+%>
+		<%= e.getMessage() %>
+<%
+	}
 }
 %>
 

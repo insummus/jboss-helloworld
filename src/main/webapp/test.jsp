@@ -48,7 +48,7 @@ try {
 </TR>
 <%
 	}
-} catch (SQLExceptin sqle) {
+} catch (SQLException sqle) {
 %>
 	<%= sqle.getMessage() %>
 <%
